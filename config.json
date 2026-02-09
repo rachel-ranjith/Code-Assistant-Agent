@@ -1,0 +1,27 @@
+{
+    "azure_openai": {
+        "api_version": "2024-12-01-preview",
+        "max_completion_tokens": 2048
+    },
+    "agents": {
+        "explainer": {
+            "description": "Explains code in plain English",
+            "default_stream": false
+        },
+        "refactor": {
+            "description": "Refactors code for improved quality",
+            "default_stream": false,
+            "default_goal": null
+        },
+        "documentation": {
+            "description": "Adds docstrings and inline comments",
+            "default_stream": false,
+            "supported_styles": ["google", "numpy", "sphinx", "pep257"],
+            "default_style": "google"
+        }
+    },
+    "orchestrator": {
+        "intent_categories": ["explain", "refactor", "document", "multiple"],
+        "fallback_intent": "explain"
+    }
+}
