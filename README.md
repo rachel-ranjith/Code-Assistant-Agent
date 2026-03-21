@@ -32,9 +32,6 @@ source venv/bin/activate
 
 3. Open the generated `.env` file and fill in your Azure OpenAI credentials.
 
-### Configuration
-
-`config.json` holds default settings for the model deployment, API version, and agent parameters. Environment variables in `.env` take precedence over config values for secrets (endpoint, API key).
 
 ## Usage
 
@@ -42,21 +39,4 @@ Run the demo:
 
 ```bash
 python -m code_assistant.demo
-```
-
-## Project Structure
-
-```
-code_assistant/
-    __init__.py
-    orchestrator.py
-    code_explainer_agent.py
-    code_refactor_agent.py
-    code_documentation_agent.py
-    demo.py
-.env.sample
-config.json
-requirements.txt
-setup.bat
-setup.sh
 ```

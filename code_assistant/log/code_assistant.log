@@ -1,0 +1,68 @@
+14:55:30 | INFO    | code_assistant | 🔧 code_triage → handoff_to_code_explainer()
+14:55:30 | INFO    | code_assistant |    ← handoff_to_code_explainer result: {'handoff_to': 'code_explainer'}
+14:55:30 | INFO    | code_assistant | 🔀 Handoff: code_triage → code_explainer
+14:55:33 | INFO    | code_assistant | ✓ code_explainer completed (3349ms)
+14:55:34 | INFO    | code_assistant | 📄 Trace saved: /Users/rachelranjith/Desktop/Projects/agentic-ai-prompt-refiner/backend/app/demos/code_assistant/log/traces/trace_handoff_20260321_145534.json
+14:55:35 | INFO    | code_assistant | 🔧 code_triage → handoff_to_code_refactor()
+14:55:35 | INFO    | code_assistant |    ← handoff_to_code_refactor result: {'handoff_to': 'code_refactor'}
+14:55:35 | INFO    | code_assistant | 🔀 Handoff: code_triage → code_refactor
+14:55:40 | INFO    | code_assistant | ✓ code_refactor completed (4812ms)
+14:55:40 | INFO    | code_assistant | 📄 Trace saved: /Users/rachelranjith/Desktop/Projects/agentic-ai-prompt-refiner/backend/app/demos/code_assistant/log/traces/trace_handoff_20260321_145540.json
+14:55:42 | INFO    | code_assistant | 🔧 code_triage → handoff_to_code_documenter()
+14:55:42 | INFO    | code_assistant |    ← handoff_to_code_documenter result: {'handoff_to': 'code_documenter'}
+14:55:42 | INFO    | code_assistant | 🔀 Handoff: code_triage → code_documenter
+14:55:46 | INFO    | code_assistant | ✓ code_documenter completed (3552ms)
+14:55:46 | INFO    | code_assistant | 📄 Trace saved: /Users/rachelranjith/Desktop/Projects/agentic-ai-prompt-refiner/backend/app/demos/code_assistant/log/traces/trace_handoff_20260321_145546.json
+14:55:50 | INFO    | code_assistant | 🔧 code_triage → handoff_to_code_refactor()
+14:55:50 | INFO    | code_assistant |    ← handoff_to_code_refactor result: {'handoff_to': 'code_refactor'}
+14:55:50 | INFO    | code_assistant | 🔀 Handoff: code_triage → code_refactor
+14:56:00 | INFO    | code_assistant | ✓ code_refactor completed (9866ms)
+14:56:00 | INFO    | code_assistant | 📄 Trace saved: /Users/rachelranjith/Desktop/Projects/agentic-ai-prompt-refiner/backend/app/demos/code_assistant/log/traces/trace_handoff_20260321_145600.json
+15:19:42 | INFO    | code_assistant | 🔧 code_triage → handoff_to_code_explainer()
+15:19:42 | INFO    | code_assistant |    ← handoff_to_code_explainer result: {'handoff_to': 'code_explainer'}
+15:19:42 | INFO    | code_assistant | 🔀 Handoff: code_triage → code_explainer
+15:19:45 | INFO    | code_assistant | ✓ code_explainer completed (2956ms)
+15:19:45 | INFO    | code_assistant | 📄 Trace saved: /Users/rachelranjith/Desktop/Projects/agentic-ai-prompt-refiner/backend/app/demos/code_assistant/log/traces/trace_handoff_20260321_151945.json
+15:19:47 | INFO    | code_assistant | 🔧 code_triage → handoff_to_code_refactor()
+15:19:47 | INFO    | code_assistant |    ← handoff_to_code_refactor result: {'handoff_to': 'code_refactor'}
+15:19:47 | INFO    | code_assistant | 🔀 Handoff: code_triage → code_refactor
+15:19:51 | INFO    | code_assistant | ✓ code_refactor completed (3335ms)
+15:19:51 | INFO    | code_assistant | 📄 Trace saved: /Users/rachelranjith/Desktop/Projects/agentic-ai-prompt-refiner/backend/app/demos/code_assistant/log/traces/trace_handoff_20260321_151951.json
+15:19:53 | INFO    | code_assistant | 🔧 code_triage → handoff_to_code_documenter()
+15:19:53 | INFO    | code_assistant |    ← handoff_to_code_documenter result: {'handoff_to': 'code_documenter'}
+15:19:53 | INFO    | code_assistant | 🔀 Handoff: code_triage → code_documenter
+15:19:56 | INFO    | code_assistant | ✓ code_documenter completed (2923ms)
+15:19:56 | INFO    | code_assistant | 📄 Trace saved: /Users/rachelranjith/Desktop/Projects/agentic-ai-prompt-refiner/backend/app/demos/code_assistant/log/traces/trace_handoff_20260321_151956.json
+15:20:02 | INFO    | code_assistant | 🔧 code_triage → handoff_to_code_refactor()
+15:20:02 | INFO    | code_assistant |    ← handoff_to_code_refactor result: {'handoff_to': 'code_refactor'}
+15:20:02 | INFO    | code_assistant | 🔀 Handoff: code_triage → code_refactor
+15:20:07 | INFO    | code_assistant | 🔧 code_refactor → handoff_to_code_documenter()
+15:20:08 | INFO    | code_assistant |    ← handoff_to_code_documenter result: {'handoff_to': 'code_documenter'}
+15:20:08 | INFO    | code_assistant | 🔀 Handoff: code_refactor → code_documenter
+15:20:08 | INFO    | code_assistant | ✓ code_refactor completed (5955ms)
+15:20:13 | INFO    | code_assistant | ✓ code_documenter completed (5598ms)
+15:20:13 | INFO    | code_assistant | 📄 Trace saved: /Users/rachelranjith/Desktop/Projects/agentic-ai-prompt-refiner/backend/app/demos/code_assistant/log/traces/trace_handoff_20260321_152013.json
+15:23:39 | INFO    | code_assistant | 🔧 code_triage → handoff_to_code_explainer()
+15:23:39 | INFO    | code_assistant |    ← handoff_to_code_explainer result: {'handoff_to': 'code_explainer'}
+15:23:39 | INFO    | code_assistant | 🔀 Handoff: code_triage → code_explainer
+15:23:42 | INFO    | code_assistant | ✓ code_explainer completed (3073ms)
+15:23:42 | INFO    | code_assistant | 📄 Trace saved: /Users/rachelranjith/Desktop/Projects/agentic-ai-prompt-refiner/backend/app/demos/code_assistant/log/traces/trace_handoff_20260321_152342.json
+15:23:44 | INFO    | code_assistant | 🔧 code_triage → handoff_to_code_refactor()
+15:23:44 | INFO    | code_assistant |    ← handoff_to_code_refactor result: {'handoff_to': 'code_refactor'}
+15:23:44 | INFO    | code_assistant | 🔀 Handoff: code_triage → code_refactor
+15:23:47 | INFO    | code_assistant | ✓ code_refactor completed (3518ms)
+15:23:47 | INFO    | code_assistant | 📄 Trace saved: /Users/rachelranjith/Desktop/Projects/agentic-ai-prompt-refiner/backend/app/demos/code_assistant/log/traces/trace_handoff_20260321_152347.json
+15:23:49 | INFO    | code_assistant | 🔧 code_triage → handoff_to_code_documenter()
+15:23:49 | INFO    | code_assistant |    ← handoff_to_code_documenter result: {'handoff_to': 'code_documenter'}
+15:23:49 | INFO    | code_assistant | 🔀 Handoff: code_triage → code_documenter
+15:23:54 | INFO    | code_assistant | ✓ code_documenter completed (4308ms)
+15:23:54 | INFO    | code_assistant | 📄 Trace saved: /Users/rachelranjith/Desktop/Projects/agentic-ai-prompt-refiner/backend/app/demos/code_assistant/log/traces/trace_handoff_20260321_152354.json
+15:23:57 | INFO    | code_assistant | 🔧 code_triage → handoff_to_code_refactor()
+15:23:57 | INFO    | code_assistant |    ← handoff_to_code_refactor result: {'handoff_to': 'code_refactor'}
+15:23:57 | INFO    | code_assistant | 🔀 Handoff: code_triage → code_refactor
+15:24:01 | INFO    | code_assistant | 🔧 code_refactor → handoff_to_code_documenter()
+15:24:02 | INFO    | code_assistant |    ← handoff_to_code_documenter result: {'handoff_to': 'code_documenter'}
+15:24:02 | INFO    | code_assistant | 🔀 Handoff: code_refactor → code_documenter
+15:24:02 | INFO    | code_assistant | ✓ code_refactor completed (4995ms)
+15:24:07 | INFO    | code_assistant | ✓ code_documenter completed (4449ms)
+15:24:07 | INFO    | code_assistant | 📄 Trace saved: /Users/rachelranjith/Desktop/Projects/agentic-ai-prompt-refiner/backend/app/demos/code_assistant/log/traces/trace_handoff_20260321_152407.json

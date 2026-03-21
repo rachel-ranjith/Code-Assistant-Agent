@@ -1,70 +1,48 @@
+import json
 import os
 import sys
+from pathlib import Path
 
-# Add the parent directory to Python path to allow imports
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.dirname(current_dir)
-sys.path.insert(0, parent_dir)
+from dotenv import load_dotenv
 
-from code_assistant.orchestrator import orchestrator
+# Allow running directly from this directory
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+load_dotenv()
 
-def print_section_header(title: str):
+from app.demos.code_assistant.runner import run_sync
+from app.models.trace_logs import TraceLog
+
+
+GROUND_TRUTH_PATH = Path(__file__).parent / "ground_truth.json"
+TRACE_DIR = str(Path(__file__).parent / "log" / "traces")
+LOG_FILE = str(Path(__file__).parent / "log" / "code_assistant.log")
+
+
+def header(title: str) -> None:
     print("\n" + "=" * 80)
     print(f"  {title}")
     print("=" * 80 + "\n")
 
-def run_demo():
-    # Sample code for testing
-    sample_code = """
-def calculate(x, y):
-    return x + y
 
-def process_data(items):
-    result = []
-    for item in items:
-        if item > 0:
-            result.append(item * 2)
-    return result
-"""
+def run_demo() -> list[TraceLog]:
+    header("CODE ASSISTANT DEMO — HANDOFF WORKFLOW")
 
-    print_section_header("CODE ASSISTANT ORCHESTRATOR DEMO")
-    print("Sample code to analyze:")
-    print("-" * 80)
-    print(sample_code)
-    print("-" * 80)
+    ground_truth = json.loads(GROUND_TRUTH_PATH.read_text())
+    code = ground_truth["code"]
+    test_cases = ground_truth["test_cases"]
 
-    # Test 1: Explanation request
-    print_section_header("TEST 1: Code Explanation Request")
-    print("User request: 'What does this code do?'\n")
-    orchestrator("What does this code do?", sample_code, stream=True)
+    print(f"Running {len(test_cases)} scenarios from ground truth.")
+    print(f"Traces will be saved to: {TRACE_DIR}/\n")
 
-    # Test 2: Refactoring request with specific goal
-    print_section_header("TEST 2: Code Refactoring Request")
-    print("User request: 'Refactor this code to improve readability and add type hints'\n")
-    orchestrator("Refactor this code to improve readability and add type hints", sample_code, stream=True)
+    traces: list[TraceLog] = []
+    for i, tc in enumerate(test_cases, 1):
+        header(f"TEST {i}: {tc['user_request']}")
+        trace_dict = run_sync(tc["user_request"], code, log_file=LOG_FILE, trace_dir=TRACE_DIR)
+        traces.append(TraceLog.model_validate(trace_dict))
 
-    # Test 3: Documentation request with style
-    print_section_header("TEST 3: Documentation Request")
-    print("User request: 'Add numpy-style docstrings to this code'\n")
-    orchestrator("Add numpy-style docstrings to this code", sample_code, stream=True)
-
-    # Test 4: Multiple operations
-    print_section_header("TEST 4: Multiple Operations Request")
-    print("User request: 'Refactor this code and then add documentation'\n")
-    orchestrator("Refactor this code and then add documentation", sample_code, stream=True)
-
-    # Test 5: Natural language variation
-    print_section_header("TEST 5: Natural Language Variation")
-    print("User request: 'Can you help me understand what's going on here?'\n")
-    orchestrator("Can you help me understand what's going on here?", sample_code, stream=True)
-
-    # Test 6: Performance-focused refactoring
-    print_section_header("TEST 6: Performance-Focused Refactoring")
-    print("User request: 'Make this code more efficient'\n")
-    orchestrator("Make this code more efficient", sample_code, stream=True)
-
-    print_section_header("DEMO COMPLETE")
-    print("All test cases executed successfully! ✨\n")
+    header("DEMO COMPLETE")
+    print(f"Saved {len(traces)} traces to: {TRACE_DIR}/\n")
+    return traces
 
 
 if __name__ == "__main__":
